@@ -136,33 +136,33 @@ int main()
 			{
 				system("mplayer 2.mp3");			
 			}
-			if(X<480 && Y<240 && X>320 && Y>1)
+			else if(X<480 && Y<240 && X>320 && Y>1)
 			{
 				system("mplayer 3.mp3");			
 			}
-			if(X<640 && Y<240 && X>480 && Y>1)
+			else if(X<640 && Y<240 && X>480 && Y>1)
 			{
 				system("mplayer 4.mp3");			
 			}
-			if(X<160 && X>1 && Y>240)
+			else if(X<160 && X>1 && Y>240)
 			{
 				system("mplayer 5.mp3");			
 			}
-			if(X<320 && X>160 && Y>240)
+			else if(X<320 && X>160 && Y>240)
 			{
 				system("mplayer 6.mp3");			
 			}
-			if(X<480 && X>320 && Y>240)
+			else if(X<480 && X>320 && Y>240)
 			{
 				system("mplayer 7.mp3");			
 			}
-			if(X<640 && X>480 && Y>240)
+			else if(X<640 && X>480 && Y>240)
 			{
 				system("mplayer 8.mp3");			
 			}
 			else
 			{
-				//system("mplayer 0.mp3");
+				system("mplayer 0.mp3");
 			//use system("start C:\\path_to\\0.mp3"); for Windows
 			}		
 		}
