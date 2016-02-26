@@ -9,13 +9,10 @@ using namespace std;
 int main()
 {
 	Mat img,imgt,imgb;
-	//img=imread("paul.jpg");
-	//resize(img,img,Size(530,360));
 	VideoCapture cap(0);
 	//system("mplayer intro.mp3");
 	namedWindow("Color");
 	namedWindow("input");
-	//namedWindow("mask");
 	moveWindow("input",605,5);
 	static int bl=0,gl=0,rl=72,bh=47,gh=46,rh=255;
 	vector < vector < Point > >contours;
@@ -28,6 +25,8 @@ int main()
 		
 	for(;;)
 	{
+		X=0;
+		Y=0;
 		count++;
 		cap>>img;
 		flip(img,img,1);
@@ -80,12 +79,7 @@ int main()
 							max=boundRect[i].width*boundRect[i].height;
 							maxi=i;
 						 }
-						//drawContours (imgt, contours2, -1, Scalar(0,255,0), 2);
-						//drawContours (img, contours2, -1, Scalar(0,255,0), 2);
-            
-						//drawContours (draw, contours2[maxi], -1, Scalar(255,255,255), 4);
-						//rectangle( draw, boundRect[maxi].tl(), boundRect[maxi].br(), Scalar(0,255,255),2,0);
-			 
+						
 					}
 		
 		if(max>90 && maxi>=0)
@@ -103,8 +97,7 @@ int main()
 
 						Point trk_pnt=Point(boundRect[maxi].x+boundRect[maxi].width/2,boundRect[maxi].y+boundRect[maxi].height/2);
 
-			    	    		//Point cursor=Point((boundRect[maxi].x)*1366/320,(boundRect[maxi].y)*768/480);
-						circle(img,trk_pnt,2,Scalar(255,255,0),10);
+			    	    		circle(img,trk_pnt,2,Scalar(255,255,0),10);
 						circle(imgt,trk_pnt,2,Scalar(255,255,0),10);				           	
 						
 						char text[10];
